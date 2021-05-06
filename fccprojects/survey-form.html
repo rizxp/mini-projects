@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizxp Survey Form</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    h1#title,
+    p#description {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    form#survey-form {
+      background-color: var(--color-dark-blue-alpha);
+      padding: 2.5rem 1.5rem 2rem 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label,
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    label {
+      display: flex;
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+      margin: 0;
+      font: inherit;
+    }
+
+    .input-radio,
+    .input-checkbox {
+      display: inline-block;
+      margin-right: 0.6rem;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    .input-textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 0.625rem;
+      resize: vertical;
+    }
+
+    .submit-button {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      background-color: var(--color-blue-one-alpha);
+      cursor: pointer;
+      color: inherit;
+    }
+
+    .submit-button:hover {
+      background-color: var(--color-blue-two-alpha);
+      outline: none;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      height: 2.5rem;
+      padding: 0 0.5rem;
+      background-color: var(--color-light);
+      background-clip: padding-box;
+      color: #666;
+    }
+
+    .form-control,
+    .input-textarea {
+      border-radius: 0.3rem;
+      border: 1px solid #ebebeb;
+    }
+
+    .form-control:focus,
+    .input-textarea:focus {
+      transition: 0.2s;
+      border-color: #87ceeb;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem #39738a;
+    }
+
+    @media (min-width: 578px) {
+      form#survey-form {
+        padding: 2.5rem 2.5rem 2rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">RIZXP - Mini Projects</a>
+      <div class="navbar-items">
+        <a href="index.html" class="nav-item">Back</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <header>
+      <h1 id="title">Rizxp Survey Form</h1>
+      <p id="description">Thank you for taking the time to do our survey test</p>
+    </header>
+    <form action="post" id="survey-form">
+      <div class="form-group">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name Here" required>
+      </div>
+      <div class="form-group">
+        <label for="email" id="email-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email Here" required>
+      </div>
+      <div class="form-group">
+        <p>Gender</p>
+        <label><input type="radio" class="input-radio" name="gender" checked />Male</label>
+        <label><input type="radio" class="input-radio" name="gender">Female</label>
+      </div>
+
+      <div class="form-group">
+        <label for="Age" id="Age-label">Age</label>
+        <input type="number" class="form-control" id="Age" name="Age" placeholder="Your Age Here" min="18" max="100"
+          required>
+      </div>
+      <div class="form-group">
+        <p>Which one to best describe your current role?</p>
+        <select class="form-control" name="dropdown-input" id="dropdown-input">
+          <option value="0" selected disabled>Select Current Role</option>
+          <option value="student">Student</option>
+          <option value="job">Full Time Job</option>
+          <option value="learner">Full Time Learner</option>
+          <option value="preferNo">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <p>Choose your favorite programming language</p>
+        <label><input name="favorite" class="input-checkbox" value="Javascript" type="checkbox"
+            checked>Javascript</label>
+        <label><input name="favorite" class="input-checkbox" value="PHP" type="checkbox">PHP</label>
+        <label><input name="favorite" class="input-checkbox" value="Python" type="checkbox">Python</label>
+        <label><input name="favorite" class="input-checkbox" value="Java" type="checkbox">Java</label>
+        <label><input name="favorite" class="input-checkbox" value="C" type="checkbox">C</label>
+        <label><input name="favorite" class="input-checkbox" value="C++" type="checkbox">C++</label>
+        <label><input name="favorite" class="input-checkbox" value="C#" type="checkbox">C#</label>
+        <label><input name="favorite" class="input-checkbox" value="Ruby" type="checkbox">Ruby</label>
+        <label><input name="favorite" class="input-checkbox" value="Other" type="checkbox">Other</label>
+      </div>
+
+      <div class="form-group">
+        <p>Any Comments or suggestions?</p>
+        <textarea class="input-textarea" name="comments" id="comments"
+          placeholder="Enter Your Comments Here..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <button class="submit-button" type="submit" id="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
