@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 :root {
   --color-light: #f1f1f1;
+  --color-light-alpha: #f1f1f1cc;
   --color-dark: #252b37;
   --color-dark-alpha: #252b37cc;
   --color-blue-one: #0043a7;
@@ -12,6 +13,7 @@
 *::before,
 *::after {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 body {
